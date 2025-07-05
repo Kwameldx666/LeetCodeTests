@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LeetCodeTests": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
