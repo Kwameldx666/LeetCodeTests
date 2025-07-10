@@ -34,9 +34,12 @@ public class Heap
     public void HeapifyUp(int index)
     {
 
-        while (index > 0 && heap[index] > heap[Parent(index)])
+        while (index > 0)
         {
-            Swap(index, Parent(index));
+            if (heap[index] > heap[Parent(index)])
+            {
+                Swap(index, Parent(index));
+            }
             index = Parent(index);
         }
     }
@@ -60,6 +63,17 @@ public class Heap
         return -1;
     }
 
+    public int[] GetSortArray()
+    {
+        int size = Count - 1;
+        while (size > 0)
+        {
+            Swap(0, size);
+            HeapifyDown(0, size);
+            size--;
+        }
+        return heap;
+    }
     public int ExtractMax()
     {
         if (IsEmpty) throw new Exception("Error");
@@ -69,7 +83,30 @@ public class Heap
         HeapifyDown(0);
         return max;
     }
+    public int Peek()
+    {
+        if (IsEmpty) throw new Exception("Error size");
+        return heap[0];
+    }
+    public void HeapifyDown(int index, int end)
+    {
+        int highest = index;
 
+        if (LeftChild(index) < end && heap[highest] < heap[LeftChild(index)])
+        {
+            highest = LeftChild(index);
+        }
+        if (RightChild(index) < end && heap[highest] < heap[RightChild(index)])
+        {
+            highest = RightChild(index);
+        }
+        if (index != highest)
+        {
+            Swap(index, highest);
+            index = highest;
+            HeapifyDown(highest, end);
+        }
+    }
     public void HeapifyDown(int index)
     {
         int highest = index;
