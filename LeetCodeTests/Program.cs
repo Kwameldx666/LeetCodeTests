@@ -1,6 +1,6 @@
 ﻿
 using LeetCodeTests.Repeat_and_learn;
-
+using LeetCodeTests.Task.Array_and_String;
 using System;
 namespace LeetCodeTests.Task4
 {
@@ -8,21 +8,11 @@ namespace LeetCodeTests.Task4
     {
         static void Main(string[] args)
         {
-            Heap heap = new(9);
-            heap.Insert(100);
-            heap.Insert(36);
-            heap.Insert(19);
-            heap.Insert(25);
-            heap.Insert(3);
-            heap.Insert(7);
-            heap.Insert(2);
-            heap.Insert(1);
-            heap.Insert(17);
-            var res = heap.GetSortArray();
-            foreach (var item in res)
-            {
-                Console.WriteLine(item.ToString());
-            }
+            Gas_Station gasstation = new Gas_Station();
+            int[] gas = new int[] { 5, 8, 2, 8 };
+            int[] cost = new int[] { 6, 5, 6, 6 };
+
+            Console.WriteLine(gasstation.CanCompleteCircuit(gas, cost));
 
 
 
