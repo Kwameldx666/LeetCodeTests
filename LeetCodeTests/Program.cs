@@ -8,9 +8,9 @@ namespace LeetCodeTests.Task4
     {
         static void Main(string[] args)
         {
-            CandyGame game = new CandyGame();
-            int[] ratings = { 1, 0, 2 };
-            Console.WriteLine(game.Candy(ratings));
+            Trapping_Rain_Water trapping_Rain_Water = new Trapping_Rain_Water();
+            int[] ints = { 2,0,2 };
+            Console.WriteLine(trapping_Rain_Water.Trap(ints));
 
 
 
