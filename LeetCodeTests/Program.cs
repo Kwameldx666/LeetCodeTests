@@ -1,4 +1,6 @@
 ﻿
+using LeetCodeTests.Daily_Questions;
+using LeetCodeTests.Helpful_tasks;
 using LeetCodeTests.Repeat_and_learn;
 using LeetCodeTests.Task.Array_and_String;
 using System;
@@ -8,9 +10,12 @@ namespace LeetCodeTests.Task4
     {
         static void Main(string[] args)
         {
-            Trapping_Rain_Water trapping_Rain_Water = new Trapping_Rain_Water();
-            int[] ints = { 2,0,2 };
-            Console.WriteLine(trapping_Rain_Water.Trap(ints));
+            Third_Task first_Task = new Third_Task();
+            int[] array = { 1,2,3,5};
+            var res = first_Task.CheckSequal(array);
+
+            Console.WriteLine(res);
+
 
 
 
