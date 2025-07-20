@@ -48,6 +48,15 @@ namespace LeetCodeTests.Helpful_tasks
             }
             return array;
         }
+        private int ArrayLength(int[] array)
+        {
+            int count = 0;
+            foreach (var item in array)
+            {
+                count++;
+            }
+            return count;
+        }
     };
 
 

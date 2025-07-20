@@ -10,11 +10,14 @@ namespace LeetCodeTests.Task4
     {
         static void Main(string[] args)
         {
-            Third_Task first_Task = new Third_Task();
-            int[] array = { 1,2,3,5};
-            var res = first_Task.CheckSequal(array);
+            Zigzag_Conversion zigzag_Conversion = new Zigzag_Conversion();
+            string s = "PAYPALISHIRING";
+            int numRows = 4;
+            var res = zigzag_Conversion.Convert(s, numRows);
+         
+                Console.WriteLine(res.CompareTo("PINALSIGYAHRPI"));
+            
 
-            Console.WriteLine(res);
 
 
 
